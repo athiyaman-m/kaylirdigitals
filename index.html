@@ -3,30 +3,82 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>LetscodeX</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>LetscodeX | Web Development, UI/UX Design & SEO Services</title>
+  <meta name="description" content="LetscodeX offers professional web development, UI/UX design, and SEO optimization services. We build modern, fast, and scalable websites that help businesses grow online.">
+  <meta name="keywords" content="LetscodeX, web development company, freelance web developer, UI UX design services, SEO optimization services, business website development, modern website design, India web developer">
+  <meta name="author" content="LetscodeX">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://letscodex.com">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="LetscodeX | Web Development & SEO Services">
+  <meta property="og:description" content="Professional web development, UI/UX design, and SEO services to help businesses attract more clients and grow digitally.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://letscodex.com">
+  <meta property="og:image" content="https://letscodex.com/assets/img/logo.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LetscodeX | Web Development & UI/UX Experts">
+  <meta name="twitter:description" content="We design and develop high-performance websites with powerful SEO strategies.">
+  <meta name="twitter:image" content="https://letscodex.com/assets/img/logo.png">
+
+  <!-- Structured Data (Schema Markup) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LetscodeX",
+    "url": "https://letscodex.com",
+    "logo": "https://letscodex.com/assets/img/logo.png",
+    "description": "LetscodeX provides professional web development, UI/UX design, and SEO optimization services for businesses and individuals.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-8940089643",
+      "contactType": "customer support",
+      "areaServed": "IN",
+      "availableLanguage": ["English"]
+    },
+    "sameAs": [
+      "https://www.instagram.com/letscodex",
+      "https://www.linkedin.com/company/letscodex"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "itemOffered": [
+        { "@type": "Service", "name": "Web Development" },
+        { "@type": "Service", "name": "UI/UX Design" },
+        { "@type": "Service", "name": "SEO Optimization" }
+      ]
+    }
+  }
+  </script>
 
   <!-- Favicons -->
   <link href="assets/img/logo.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Lato:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
+
 
 <body class="index-page">
 
@@ -35,8 +87,6 @@
 
       <div class="top-row d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
           <h1 class="sitename">Lets<span style="color: #dd3209">x</span>Code<span style="color: #dd3209">.</span></h1>
         </a>
 
@@ -44,7 +94,6 @@
           <div class="social-links">
             <a href="https://www.instagram.com/letscodex.tech" class="instagram"><i class="bi bi-instagram"></i></a>
             <a href="https://www.linkedin.com/in/athiyaman-m-a2843922a/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <!-- <a href="https://www.facebook.com/share/1CAMUBZyHd/" class="facebook"><i class="bi bi-facebook"></i></a> -->
             <a href="https://x.com/athiyamanpro?t=C3kKeUEr47AP1UeK3HHB0Q&s=09" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="https://youtube.com/@athiyamanpro?si=i0zBSpDNkPgK1XLN" class="youtube"><i class="bi bi-youtube"></i></a>
           </div>
@@ -62,28 +111,11 @@
       <div class="container d-flex justify-content-center position-relative">
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#pricing">Pricing</a></li>
-            <li class="dropdown"><a href="#non"><span>Training</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#non">UI/UX Design</a></li>
-                <li class="dropdown"><a href="#n"><span>Data Science</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#n">Python</a></li>
-                    <li><a href="#n">SQL</a></li>
-                    <li><a href="#n">Power BI</a></li>
-                    <li><a href="#n">AI/ML/DL</a></li>
-                    <li><a href="#n">GenAI/LLM</a></li>
-                  </ul>
-                </li>
-                <li><a href="#n">Web & App Development</a></li>
-                <li><a href="#n">Mini Projects</a></li>
-                <li><a href="#n">Internship</a></li>
-              </ul>
-            </li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -100,7 +132,7 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <h3 class="display-5 fw-bold mb-3" style="text-align: center;">Let's code your <span id="dynamic-word" aria-live="polite">idea</span>!</h3>
+        <h3 class="display-6 fw-bold mb-4 mt-2" style="text-align: center;">Let's code your <span id="dynamic-word" aria-live="polite">idea</span>!</h3>
 
         <div class="row align-items-center gy-5">
 
@@ -113,7 +145,6 @@
                 <span>Design that inspires. Code that transforms.</span>
               </div>
               <div class="content">
-                <!-- <h2 class="display-5 fw-bold mb-3">Build modern interfaces that feel effortless</h2> -->
                  <h2 class="display-5 fw-bold mb-3">Elevate Your Business Beyond Expectations!</h2>
                 <p class="lead mb-4">Empowering ideas with sleek design, intelligent code, and cutting-edge tech.
                                     From AI-driven solutions to dynamic web and mobile apps, we craft products that make innovation simple.</p>
@@ -165,7 +196,7 @@
 
       </div>
 
-    </section><!-- /Hero Section -->
+    </section>
 
     <!-- Featured Services Section -->
     <section id="featured-services" class="featured-services section">
@@ -182,14 +213,9 @@
               </div>
               <h3>Web & App Development</h3>
               <p>We build responsive websites and mobile apps that are fast, user-friendly, and visually stunning, turning ideas into digital realities.</p>
-              <div class="card-links">
-                <a href="#n" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
+              
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <!-- Card 3 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
@@ -199,14 +225,9 @@
               </div>
               <h3>Graphic Design</h3>
               <p>We create visually stunning graphics, logos, and brand materials that bring your ideas to life and make your business stand out.</p>
-              <div class="card-links">
-                <a href="#n" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
+              
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
 
           <!-- Card 4 -->
@@ -217,14 +238,9 @@
               </div>
               <h3>AI Integration</h3>
               <p>We implement AI solutions to your business, from intelligent automation to smart analytics, helping you make data-driven decisions.</p>
-              <div class="card-links">
-                <a href="#n" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
+              
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <!-- Card 6 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
@@ -234,14 +250,9 @@
               </div>
               <h3>Process Automation</h3>
               <p>We optimize workflows with automation tools, integrating systems to save time, reduce errors, and increase overall operational efficiency.</p>
-              <div class="card-links">
-                <a href="#n" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
+              
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <!-- Card 2 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
@@ -249,16 +260,11 @@
               <div class="icon">
                 <i class="bi bi-shield-check"></i>
               </div>
-              <h3>Secure Systems</h3>
-              <p>We prioritize security at every stage, implementing robust solutions that protect your data and ensure seamless, reliable performance.</p>
-              <div class="card-links">
-                <a href="#n" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
+              <h3>SEO Optimization</h3>
+              <p>We help your website rank higher on search engines through effective optimization, keyword strategies, and performance improvements.</p>
+              
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <!-- Card 5 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
@@ -268,20 +274,14 @@
               </div>
               <h3>Training & Mentorship</h3>
               <p>We offer personalized training sessions, workshops, and mentorship in web development, AI, data science, and emerging technologies.</p>
-              <div class="card-links">
-                <a href="#n" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
+              
             </div>
-          </div><!-- End Service Item -->
-
+          </div>
         </div>
 
       </div>
 
-    </section><!-- /Featured Services Section -->
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -350,7 +350,7 @@
                   </div>
                   <div class="divider"></div>
                   <div class="metric">
-                    <span class="value">85</span>
+                    <span class="value">40+</span>
                     <span class="label">Projects</span>
                   </div>
                   <div class="divider"></div>
@@ -371,58 +371,10 @@
               </div>
             </article>
           </div>
-
         </div>
-
       </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Clients Section -->
-    <!-- <section id="clients" class="clients section">
-
-      <div class="container" data-aos="fade-up">
-        <div class="clients-wrapper">
-          <div class="clients-track">
-            <div class="client-logo">
-              <img src="assets/img/clients/clients-2.webp" class="img-fluid" alt="Client 1" loading="lazy">
-            </div>
-
-            <div class="client-logo">
-              <img src="assets/img/clients/clients-5.webp" class="img-fluid" alt="Client 2" loading="lazy">
-            </div>
-
-            <div class="client-logo">
-              <img src="assets/img/clients/clients-8.webp" class="img-fluid" alt="Client 3" loading="lazy">
-            </div>
-
-            <div class="client-logo">
-              <img src="assets/img/clients/clients-11.webp" class="img-fluid" alt="Client 4" loading="lazy">
-            </div>
-
-            <div class="client-logo">
-              <img src="assets/img/clients/clients-14.webp" class="img-fluid" alt="Client 5" loading="lazy">
-            </div>
-
-            <div class="client-logo">
-              <img src="assets/img/clients/clients-3.webp" class="img-fluid" alt="Client 6" loading="lazy">
-            </div>
-
-            <div class="client-logo">
-              <img src="assets/img/clients/clients-6.webp" class="img-fluid" alt="Client 7" loading="lazy">
-            </div>
-
-            <div class="client-logo">
-              <img src="assets/img/clients/clients-9.webp" class="img-fluid" alt="Client 8" loading="lazy">
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section> -->
+    </section>
     
-    <!-- /Clients Section -->
 
     <!-- Stats Section -->
     <section id="stats" class="stats section">
@@ -441,7 +393,7 @@
                   </div>
                 </div>
                 <div class="tile-metric">
-                  <span class="metric-number purecounter" data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1"></span>
+                  <span class="metric-number purecounter" data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1"></span>
                   <span class="metric-suffix">+</span>
                 </div>
               </article><!-- End Stat Tile -->
@@ -455,7 +407,7 @@
                   </div>
                 </div>
                 <div class="tile-metric">
-                  <span class="metric-number purecounter" data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1"></span>
+                  <span class="metric-number purecounter" data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="1"></span>
                   <span class="metric-suffix">+</span>
                 </div>
               </article><!-- End Stat Tile -->
@@ -469,7 +421,8 @@
                   </div>
                 </div>
                 <div class="tile-metric">
-                  <span class="metric-number purecounter" data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"></span>
+                  <span class="metric-number purecounter" data-purecounter-start="0" data-purecounter-end="800" data-purecounter-duration="1"></span>
+                  <span class="metric-suffix">+</span>
                 </div>
               </article><!-- End Stat Tile -->
 
@@ -483,6 +436,8 @@
                 </div>
                 <div class="tile-metric">
                   <span class="metric-number purecounter" data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"></span>
+                  <span class="metric-suffix">+</span>
+
                 </div>
               </article><!-- End Stat Tile -->
             </div>
@@ -582,13 +537,13 @@
 
               <div class="skill-item">
                 <div class="skill-header">
-                  <h4>Quality Assurance</h4>
+                  <h4>SEO Optimization</h4>
                   <span class="skill-value">92%</span>
                 </div>
                 <div class="skill-bar progress">
                   <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <p>Comprehensive testing protocols</p>
+                <p>Optimize your website to rank higher and reach more customers</p>
               </div><!-- End Skills Item -->
 
               <div class="skill-item">
@@ -604,11 +559,8 @@
 
             </div>
           </div>
-
         </div>
-
       </div>
-
     </section><!-- /Skills Section -->  
 
     <!-- Services Section -->
@@ -643,9 +595,8 @@
                 </ul>
                 <div class="service-pricing">
                   <span class="price-tag">₹999</span>
-                  <a href="#n" class="service-btn">
-                    <span>Learn More</span>
-                    <i class="bi bi-arrow-right"></i>
+                  <a href="https://wa.me/+918940089643?text=Hi%2C%20I%20need%20professional%20UI%2FUX%20services.%20Can%20you%20help%3F" target="_blank" class="service-btn">
+                    <span>Get Started</span>
                   </a>
                 </div>
               </div>
@@ -671,9 +622,10 @@
                 </ul>
                 <div class="service-pricing">
                   <span class="price-tag">₹3,499</span>
-                  <a href="#n" class="service-btn">
-                    <span>Learn More</span>
-                    <i class="bi bi-arrow-right"></i>
+                  <a href="#pricing" target="_blank" class="service-btn">
+
+                    <span>Get Started</span>
+                    <!-- <i class="bi bi-arrow-right"></i> -->
                   </a>
                 </div>
               </div>
@@ -699,9 +651,9 @@
                 </ul>
                 <div class="service-pricing">
                   <span class="price-tag">₹2,999</span>
-                  <a href="#n" class="service-btn">
-                    <span>Learn More</span>
-                    <i class="bi bi-arrow-right"></i>
+                  <a href="https://wa.me/+918940089643?text=Hi%2C%20I%20need%20%20AI%20FChatobot%20services%20for%20my%20Bysiness.%20Can%20you%20help%3F" target="_blank" class="service-btn">
+                    <span>Get Started</span>
+                    <!-- <i class="bi bi-arrow-right"></i> -->
                   </a>
                 </div>
               </div>
@@ -727,9 +679,9 @@
                 </ul>
                 <div class="service-pricing">
                   <span class="price-tag">₹499</span>
-                  <a href="#n" class="service-btn">
-                    <span>Learn More</span>
-                    <i class="bi bi-arrow-right"></i>
+                  <a href="https://wa.me/+918940089643?text=Hi%2C%20I%20need%20SEO%20for%20my%20website.%20Can%20you%20help%3F" target="_blank" class="service-btn">
+                    <span>Get Started</span>
+                    <!-- <i class="bi bi-arrow-right"></i> -->
                   </a>
                 </div>
               </div>
@@ -755,9 +707,9 @@
                 </ul>
                 <div class="service-pricing">
                   <span class="price-tag">₹5,499</span>
-                  <a href="#n" class="service-btn">
-                    <span>Learn More</span>
-                    <i class="bi bi-arrow-right"></i>
+                  <a href="https://wa.me/+918940089643" target="_blank" class="service-btn">
+                    <span>Get Started</span>
+                    <!-- <i class="bi bi-arrow-right"></i> -->
                   </a>
                 </div>
               </div>
@@ -783,9 +735,9 @@
                 </ul>
                 <div class="service-pricing">
                   <span class="price-tag">₹499</span>
-                  <a href="#n" class="service-btn">
-                    <span>Learn More</span>
-                    <i class="bi bi-arrow-right"></i>
+                  <a href="https://wa.me/+918940089643" target="_blank" class="service-btn">
+                    <span>Get Started</span>
+                    <!-- <i class="bi bi-arrow-right"></i> -->
                   </a>
                 </div>
               </div>
@@ -826,9 +778,6 @@
                 <div class="mt-4">
                   <a href="#non" class="btn cta-btn">
                     <i class="bi bi-box-arrow-in-right me-2"></i>Get Started
-                  </a>
-                  <a href="#non" class="btn link-btn ms-2">
-                    Learn More <i class="bi bi-arrow-right ms-1"></i>
                   </a>
                 </div>
               </div>
@@ -953,11 +902,6 @@
           <div class="row" data-aos="fade-up" data-aos-delay="100">
             <div class="col-lg-12 d-flex justify-content-center mt-4">
               <ul class="portfolio-filters isotope-filters">
-                <!-- <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-photography">Photography</li>
-                <li data-filter=".filter-design">Design</li>
-                <li data-filter=".filter-automotive">Automotive</li>
-                <li data-filter=".filter-nature">Nature</li> -->
                 <li data-filter="*" class="filter-active">All</li>
                 <li data-filter=".filter-photography">Websites</li>
                 <li data-filter=".filter-design">Apps</li>
@@ -984,6 +928,7 @@
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
+            
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
               <div class="portfolio-wrap">
@@ -1001,6 +946,24 @@
               </div>
             </div><!-- End Portfolio Item -->
 
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
+              <div class="portfolio-wrap">
+                <img src="assets/img/portfolio/port.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                <div class="portfolio-info">
+                  <h4>Portfolio</h4>
+                  <p></p>
+                  <p>A freelancer portfolio website built to showcase skills, work, and services.</p>
+                  <p>Click the link below to view the website</p>
+                  <div class="portfolio-links">
+                    <a href="assets/img/portfolio/port.png" class="glightbox" title="Freelancer Portfolio"><i class="bi bi-zoom-in"></i></a>
+                    <a href="https://chandrabalan-c.github.io/Chanfreenlancer/" title="More Details"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-automotive">
               <div class="portfolio-wrap">
                 <img src="assets/img/portfolio/ds2.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
@@ -1015,7 +978,23 @@
                   </div>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
+              <div class="portfolio-wrap">
+                <img src="assets/img/portfolio/web2.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                <div class="portfolio-info">
+                  <h4>Portfolio Site</h4>
+                  <p></p>
+                  <p>This is personal portfolio website built to showcase the work and skills.</p>
+                  <p>Click the link below to view the website.</p>
+                  <div class="portfolio-links">
+                    <a href="assets/img/portfolio/web2.png" class="glightbox" title="Athiyaman Portfolio"><i class="bi bi-zoom-in"></i></a>
+                    <a href="#no" title="More Details"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-automotive">
               <div class="portfolio-wrap">
@@ -1033,38 +1012,6 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
-              <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/web2.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                <div class="portfolio-info">
-                  <h4>Portfolio Site</h4>
-                  <p></p>
-                  <p>This is personal portfolio website built to showcase the work and skills.</p>
-                  <p>Click the link below to view the website.</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/portfolio/web2.png" class="glightbox" title="Athiyaman Portfolio"><i class="bi bi-zoom-in"></i></a>
-                    <a href="#no" title="More Details"><i class="bi bi-link-45deg"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
-              <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/app1.jpeg" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                <div class="portfolio-info">
-                  <h4>AI Voice Calculator APP</h4>
-                  <p></p>
-                  <p>This app build with chess UI and it can perform calculations using voice commands.</p>
-                  <p>Click the link below to download the APK.</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/portfolio/app1.jpeg" class="glightbox" title="Smart AI Calci App"><i class="bi bi-zoom-in"></i></a>
-                    <a href="https://github.com/athiyaman-m/smart_ai_calculator" title="More Details"><i class="bi bi-link-45deg"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
           </div><!-- End Portfolio Container -->
 
         </div>
@@ -1073,11 +1020,8 @@
 
     </section><!-- /Portfolio Section -->
 
-    <!-- Testimonials Section (refer notes) -->
-
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section light-background">
-
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Reviews</h2>
@@ -1090,56 +1034,7 @@
           <div class="col-12">
             <div class="critic-reviews" data-aos="fade-up" data-aos-delay="300">
               <div class="row">
-                 <!-- <div class="col-md-4">
-                  <div class="critic-review">
-                    <div class="review-quote">"</div>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p>Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-                    <div class="critic-info">
-                      <div class="critic-name">The New York Times</div>
-                    </div>
-                  </div>
-                </div>  -->
-                 <!-- <div class="col-md-4">
-                  <div class="critic-review">
-                    <div class="review-quote">"</div>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-half"></i>
-                    </div>
-                    <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat.</p>
-                    <div class="critic-info">
-                      <div class="critic-name">Washington Post</div>
-                    </div>
-                  </div>
-                </div>  -->
-                 <!-- <div class="col-md-4">
-                  <div class="critic-review">
-                    <div class="review-quote">"</div>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
-                    <div class="critic-info">
-                      <div class="critic-name">The Guardian</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>  -->
+                 
 
             <div class="testimonials-container">
               <div class="swiper testimonials-slider init-swiper" data-aos="fade-up" data-aos-delay="400">
@@ -1179,13 +1074,13 @@
                         <i class="bi bi-star-fill"></i>
                       </div>
                       <p>
-                        Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla quis lorem ut libero malesuada feugiat.
+                        Excellent work! The portfolio looks professional, modern, and represents my brand perfectly. Highly satisfied with the final result.
                       </p>
                       <div class="testimonial-profile">
-                        <img src="assets/img/person/person-f-1.webp" alt="Reviewer" class="img-fluid rounded-circle">
+                        <img src="assets/img/person/chanWithCoat.png" alt="Reviewer" class="img-fluid rounded-circle">
                         <div>
-                          <h3>Jane Smith</h3>
-                          <h4>Book Enthusiast</h4>
+                          <h3>Chandrabalan</h3>
+                          <h4>Freelancer</h4>
                         </div>
                       </div>
                     </div>
@@ -1201,13 +1096,13 @@
                         <i class="bi bi-star-fill"></i>
                       </div>
                       <p>
-                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus.
+                        A well-designed website that improved my business presence. Customers find it easy to understand my services now. Great work.
                       </p>
                       <div class="testimonial-profile">
                         <img src="assets/img/person/person-m-2.webp" alt="Reviewer" class="img-fluid rounded-circle">
                         <div>
-                          <h3>Michael Johnson</h3>
-                          <h4>Sci-Fi Blogger</h4>
+                          <h3>Varun</h3>
+                          <h4>Business Owner</h4>
                         </div>
                       </div>
                     </div>
@@ -1223,17 +1118,17 @@
                         <i class="bi bi-star-half"></i>
                       </div>
                       <p>
-                        Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada.
+                        The portfolio is professional and well-designed. It showcased my skills effectively and helped me get hired. Truly happy with the outcome.
                       </p>
                       <div class="testimonial-profile">
-                        <img src="assets/img/person/person-f-3.webp" alt="Reviewer" class="img-fluid rounded-circle">
+                        <img src="assets/img/person/athi.png" alt="Reviewer" class="img-fluid rounded-circle">
                         <div>
-                          <h3>Emily Davis</h3>
-                          <h4>Book Club President</h4>
+                          <h3>Athiyaman</h3>
+                          <h4>Developer</h4>
                         </div>
                       </div>
                     </div>
-                  </div><!-- End testimonial item -->
+                  </div>
 
                   <div class="swiper-slide">
                     <div class="testimonial-item">
@@ -1242,117 +1137,29 @@
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
                       </div>
                       <p>
-                        Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur.
+                        The application made managing my milk business much easier. Daily entries, customer details, and payments are now well organized
                       </p>
                       <div class="testimonial-profile">
-                        <img src="assets/img/person/person-m-4.webp" alt="Reviewer" class="img-fluid rounded-circle">
+                        <img src="assets/img/person/person-m-7.webp" alt="Reviewer" class="img-fluid rounded-circle">
                         <div>
-                          <h3>Robert Wilson</h3>
-                          <h4>Literary Reviewer</h4>
+                          <h3>Rahul</h3>
+                          <h4>Dairy Business</h4>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <!-- End testimonial item -->
+                  </div><!-- End testimonial item -->
 
+                  
                 </div>
                 <div class="swiper-pagination"></div>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- <div class="row">
-          <div class="col-12 text-center" data-aos="fade-up">
-            <div class="overall-rating">
-              <div class="rating-number">4.8</div>
-              <div class="rating-stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
-              </div>
-              <p>Based on 230+ reviews</p>
-              <div class="rating-platforms">
-                <span>Goodreads</span>
-                <span>Amazon</span>
-                <span>Barnes &amp; Noble</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </section><!-- /Testimonials Section -->
-
-    <!-- Call To Action Section -->
-
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
-        <p>A passionate group of developers, designers, and innovators turning ideas into powerful digital experiences.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-4 align-items-stretch">
-
-          <div class="col-md-6 col-lg-3">
-            <article class="member-card h-100" data-aos="zoom-in" data-aos-delay="150">
-              <figure class="member-media">
-                <img src="assets/img/person/profile-pic.jpg" class="img-fluid" alt="Team member portrait">
-                <ul class="social-list">
-                  <li><a href="https://www.linkedin.com/in/athiyaman-m-a2843922a/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
-                  <li><a href="https://github.com/athiyaman-m" aria-label="Github"><i class="bi bi-github"></i></a></li>
-                  <li><a href="https://x.com/athiyamanpro?t=C3kKeUEr47AP1UeK3HHB0Q&s=09" aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
-                </ul>
-              </figure>
-              <div class="member-content">
-                <h3 class="member-name">Athiyaman M</h3>
-                <p class="member-role">Software Engineer</p>
-                <p class="member-bio">Builds fast, scalable, and secure applications using modern tech stacks that power real-world solutions.</p>
-              </div>
-            </article><!-- End Team Member -->
-          </div>
-
-        </div>
-
-        <div class="row g-4 mt-2">
-          <div class="col-lg-8">
-            <div class="team-highlight d-flex align-items-center" data-aos="fade-right" data-aos-delay="200">
-              <div class="icon-wrap">
-                <i class="bi bi-people"></i>
-              </div>
-              <div class="copy">
-                <h4 class="title">Collaborative Minds. Real Impact.</h4>
-                <p class="desc mb-0">At LetsCodex, we believe in teamwork, innovation, and execution. Every project is a collaboration of creativity, strategy, and technology — built to make a difference.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 d-flex align-items-stretch">
-            <aside class="join-card w-100" data-aos="fade-left" data-aos-delay="250">
-              <div class="join-content">
-                <h5 class="mb-2">Want to work with us?</h5>
-                <p class="mb-3">We’re always looking to collaborate with creative developers, designers, and thinkers. Let’s build something great together.</p>
-                <a href="https://wa.me/+918940089643" class="btn btn-join">
-                  <i class="bi bi-send me-1"></i>
-                  Join Now
-                </a>
-              </div>
-            </aside>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Team Section -->
+    </section>
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing section">
@@ -1376,12 +1183,12 @@
               <div class="pricing-display">
                 <div class="price">
                   <span class="currency">₹</span>
-                  <span class="amount">4,999</span>
+                  <span class="amount">5,999</span>
                   <span class="period">/project</span>
                 </div>
               </div>
               <div class="features-list">
-            <div class="feature"><i class="bi bi-check2"></i><span>Up to 5 Pages</span></div>
+            <div class="feature"><i class="bi bi-check2"></i><span>Up to 3 Pages</span></div>
             <div class="feature"><i class="bi bi-check2"></i><span>Responsive Design</span></div>
             <div class="feature"><i class="bi bi-check2"></i><span>Basic SEO Setup</span></div>
             <div class="feature"><i class="bi bi-check2"></i><span>1 Month Support</span></div>
@@ -1401,12 +1208,12 @@
               <div class="pricing-display">
                 <div class="price">
                   <span class="currency">₹</span>
-                  <span class="amount">14,999</span>
+                  <span class="amount">15,999</span>
                   <span class="period">/project</span>
                 </div>
               </div>
               <div class="features-list">
-            <div class="feature"><i class="bi bi-check2"></i><span>Up to 10 Pages</span></div>
+            <div class="feature"><i class="bi bi-check2"></i><span>Up to 8 Pages</span></div>
             <div class="feature"><i class="bi bi-check2"></i><span>Dynamic Website</span></div>
             <div class="feature"><i class="bi bi-check2"></i><span>SEO Optimization</span></div>
             <div class="feature"><i class="bi bi-check2"></i><span>Performance Tuning</span></div>
@@ -1426,7 +1233,7 @@
               <div class="pricing-display">
                 <div class="price">
                   <span class="currency">₹</span>
-                  <span class="amount">24,999</span>
+                  <span class="amount">25,999</span>
                   <span class="period">/project</span>
                 </div>
               </div>
@@ -1457,8 +1264,6 @@
 
     </section><!-- /Pricing Section -->
 
-    <!--FAQ Section Place (refer notes for code)-->
-
     <!-- Contact Section -->
     <section id="contact" class="contact section dark-background">
 
@@ -1486,6 +1291,7 @@
               <div>
                 <h3>Call Us</h3>
                 <p>+91-8940089643</p>
+                <p>+91-6381806635</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -1554,7 +1360,6 @@
             <div class="social-links mt-4">
               <a href="https://www.instagram.com/letscodex.tech" class="instagram"><i class="bi bi-instagram"></i></a>
             <a href="https://www.linkedin.com/in/athiyaman-m-a2843922a/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <!-- <a href="https://www.facebook.com/share/1CAMUBZyHd/" class="facebook"><i class="bi bi-facebook"></i></a> -->
             <a href="https://x.com/athiyamanpro?t=C3kKeUEr47AP1UeK3HHB0Q&s=09" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="https://youtube.com/@athiyamanpro?si=i0zBSpDNkPgK1XLN" class="youtube"><i class="bi bi-youtube"></i></a>
             </div>
@@ -1564,15 +1369,6 @@
         <div class="col-lg-6">
           <div class="footer-links-grid">
             <div class="row">
-              <!-- <div class="col-6 col-md-4">
-                <h5>Company</h5>
-                <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Our Team</a></li>
-                  <li><a href="#">Careers</a></li>
-                  <li><a href="#">Newsroom</a></li>
-                </ul>
-              </div> -->
               <div class="col-6 col-md-4">
                 <h5>Services</h5>
                 <ul class="list-unstyled">
@@ -1612,10 +1408,6 @@
             <div class="footer-bottom-content">
               <p class="mb-0">2025 © <span class="sitename">letscodex</span>. All rights reserved.</p>
               <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you've purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
                 Designed by <a href="https://letscodex.pages.dev/">LetsCodeX</a>
               </div>
             </div>
@@ -1626,7 +1418,7 @@
 
     <!-- Floating WhatsApp Button -->
     <div class="whatsapp-float">
-      <a href="https://wa.me/+918940089643" target="_blank">
+      <a href="https://wa.me/+918940089643?text=Hi%2C%20I%20need%20a%20budget-friendly%20website.%20Can%20you%20help%3F" target="_blank">
         <img src="assets\img\whats.webp" alt="WhatsApp" width="45" height="45">
       </a>
     </div>
