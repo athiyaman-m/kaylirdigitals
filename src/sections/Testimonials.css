@@ -1,0 +1,109 @@
+/* ========================================
+   TESTIMONIALS SECTION
+   ======================================== */
+
+.testimonials__header {
+  margin-bottom: var(--space-2xl);
+}
+
+.testimonials__swiper {
+  padding-bottom: var(--space-xl);
+}
+
+/* Card */
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+}
+
+.testimonial-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(225, 29, 46, 0.2);
+}
+
+/* Stars */
+.testimonial__stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: var(--space-md);
+}
+
+/* Text */
+.testimonial-card__text {
+  font-size: var(--fs-body);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  flex-grow: 1;
+  margin-bottom: var(--space-lg);
+  font-style: italic;
+  /* Equal height: clamp to exactly 4 lines */
+  min-height: calc(var(--fs-body) * 1.7 * 4);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Author */
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.testimonial-card__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 2px solid var(--color-red);
+  flex-shrink: 0;
+}
+
+.testimonial-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-card__name {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-body);
+  color: var(--color-white);
+}
+
+.testimonial-card__role {
+  font-size: var(--fs-small);
+  color: var(--color-gray);
+}
+
+/* Pagination */
+.testimonials__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: var(--space-lg);
+}
+
+.testimonials__pagination .swiper-pagination-bullet {
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+  transition: all var(--transition-base);
+}
+
+.testimonials__pagination .swiper-pagination-bullet-active {
+  background: var(--color-red);
+  width: 40px;
+}
