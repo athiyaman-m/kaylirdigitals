@@ -30,8 +30,8 @@ function Preloader({ onComplete }) {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="preloader__7">7</span>
-          <span className="preloader__f">F</span>
+          <span className="preloader__7">Kaylir</span>
+          <span className="preloader__f">Digitals</span>
         </motion.div>
         <motion.div
           className="preloader__bar-track"
@@ -52,7 +52,7 @@ function Preloader({ onComplete }) {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          We Grow With You
+          யாவரும் கேளிர். Everyone is kin.
         </motion.p>
       </div>
     </motion.div>

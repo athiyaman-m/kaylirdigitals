@@ -1,5 +1,5 @@
 /* ========================================
-   7F DIGITAL — Design System & Global Styles
+   KAYLIR DIGITALS — Design System & Global Styles
    Brand: Red (#E11D2E), Black (#111111), Cream (#F5F3EE)
    Fonts: Poppins (Display), DM Sans (Body)
    ======================================== */
@@ -15,7 +15,7 @@
   --color-gray: #B5B5B5;
   --color-gray-light: #E8E8E8;
 
-  /* Semantic Colors */
+  /* Semantic Colors (Dark theme — default) */
   --color-bg-primary: var(--color-black);
   --color-bg-secondary: var(--color-cream);
   --color-bg-white: var(--color-white);
@@ -23,6 +23,23 @@
   --color-text-dark: var(--color-black);
   --color-text-muted: var(--color-gray);
   --color-accent: var(--color-red);
+
+  /* Theme-aware tokens (Dark defaults) */
+  --theme-card-dark: rgba(255, 255, 255, 0.04);
+  --theme-border-dark: rgba(255, 255, 255, 0.08);
+  --theme-card-dark-hover: rgba(255, 255, 255, 0.07);
+  --theme-text-on-dark: #FFFFFF;
+  --theme-text-muted-on-dark: #B5B5B5;
+  --theme-navbar-bg: rgba(17, 17, 17, 0.92);
+  --theme-section-dark-bg: #111111;
+  --theme-section-cream-bg: #F5F3EE;
+  --theme-section-white-bg: #FFFFFF;
+  --theme-card: #FFFFFF;
+  --theme-border: rgba(0, 0, 0, 0.08);
+  --theme-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --theme-text-main: #111111;
+  --theme-icon-bg: #111111;
+  --theme-off-white: #F9F9F9;
 
   /* Typography */
   --font-display: 'Poppins', sans-serif;
@@ -83,6 +100,37 @@
   --z-modal: 300;
 }
 
+/* --- Light Theme Overrides --- */
+[data-theme="light"] {
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F7F7F7;
+  --color-bg-white: #FFFFFF;
+  --color-text-primary: #111111;
+  --color-text-dark: #222222;
+  --color-text-muted: #777777;
+
+  --theme-card-dark: rgba(0, 0, 0, 0.03);
+  --theme-border-dark: rgba(0, 0, 0, 0.08);
+  --theme-card-dark-hover: rgba(0, 0, 0, 0.06);
+  --theme-text-on-dark: #111111;
+  --theme-text-muted-on-dark: #666666;
+  --theme-navbar-bg: rgba(255, 255, 255, 0.92);
+  --theme-section-dark-bg: #FFFFFF;
+  --theme-section-cream-bg: #F7F7F7;
+  --theme-section-white-bg: #FFFFFF;
+  --theme-card: #FFFFFF;
+  --theme-border: rgba(0, 0, 0, 0.1);
+  --theme-shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --theme-text-main: #111111;
+  --theme-icon-bg: #F0F0F0;
+  --theme-off-white: #F5F5F5;
+}
+
+/* Smooth transition on theme change */
+html {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
 /* --- Global Reset --- */
 *,
 *::before,
@@ -104,8 +152,9 @@ body {
   font-size: var(--fs-body);
   line-height: 1.6;
   color: var(--color-text-dark);
-  background-color: var(--color-cream);
+  background-color: var(--theme-section-cream-bg);
   overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* --- Custom Scrollbar --- */
@@ -114,7 +163,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-black);
+  background: var(--theme-section-dark-bg);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -180,18 +229,21 @@ input, textarea {
 }
 
 .section-dark {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--theme-section-dark-bg);
+  color: var(--theme-text-on-dark);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .section-cream {
-  background-color: var(--color-cream);
+  background-color: var(--theme-section-cream-bg);
   color: var(--color-text-dark);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .section-white {
-  background-color: var(--color-white);
+  background-color: var(--theme-section-white-bg);
   color: var(--color-text-dark);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .text-red {
@@ -349,7 +401,7 @@ input, textarea {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: var(--color-black);
+  background: var(--theme-section-dark-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -365,18 +417,22 @@ input, textarea {
 .preloader__logo {
   display: flex;
   align-items: baseline;
+  gap: 10px;
   font-family: var(--font-display);
   font-weight: var(--fw-black);
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 6vw, 4rem);
   line-height: 1;
 }
 
 .preloader__7 {
-  color: var(--color-white);
+  color: var(--color-red);
 }
 
 .preloader__f {
-  color: var(--color-red);
+  color: var(--color-white);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.1em;
 }
 
 .preloader__bar-track {
@@ -430,9 +486,9 @@ input, textarea {
   z-index: var(--z-sticky);
   width: 48px;
   height: 48px;
-  background: var(--color-black);
-  color: var(--color-white);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: var(--theme-section-dark-bg);
+  color: var(--theme-text-on-dark);
+  border: 2px solid var(--theme-border-dark);
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;

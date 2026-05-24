@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-black);
+  background: var(--theme-icon-bg);
   color: var(--color-red);
   border-radius: var(--radius-md);
   flex-shrink: 0;
@@ -113,8 +113,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-black);
-  color: var(--color-white);
+  background: var(--theme-icon-bg);
+  color: var(--theme-text-on-dark);
   border-radius: var(--radius-full);
   transition: all var(--transition-base);
 }

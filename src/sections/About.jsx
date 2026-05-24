@@ -70,22 +70,22 @@ export default function About() {
             </motion.div>
 
             <motion.h2 className="section-title" variants={itemVariants}>
-              WE DON'T DO TEMPLATES.
+              YOUR SHOP IS
               <br />
-              <span className="text-red">WE BUILD STRATEGIES</span>
+              <span className="text-red">OUR SHOP.</span>
               <br />
-              THAT FIT YOU.
+              WE BUILD TOGETHER.
             </motion.h2>
 
             <motion.p className="about__desc" variants={itemVariants}>
-              7F Digital is a creative agency helping small businesses in Tamil Nadu
-              build strong digital presence. From boutiques and textile shops to
-              restaurants and tile stores — we build strategies, not templates.
+              Kaylir Digitals is a small team from Tamil Nadu that builds digital
+              presence for small businesses — websites, social media, and ads.
+              We study your business first. Then we build.
             </motion.p>
 
             <motion.p className="about__desc about__desc--muted" variants={itemVariants}>
-              Based in Villupuram, Pondicherry, Chennai and surrounding areas,
-              we work closely with real businesses to deliver real results.
+              யாவரும் கேளிர் — Everyone is kin. That's the idea behind Kaylir.
+              Your business is our business. 🤝
             </motion.p>
 
             <motion.div className="about__cta" variants={itemVariants}>
@@ -115,12 +115,12 @@ export default function About() {
                   </defs>
                   <text>
                     <textPath href="#circlePath" startOffset="0%">
-                      7 FRAMES • ONE STORY • STRATEGY BEFORE DESIGN •
+                      KAYLIR • DIGITALS • YOUR BUSINESS IS OUR BUSINESS •
                     </textPath>
                   </text>
                 </svg>
                 <div className="stamp-center">
-                  <span className="stamp-7f">7F</span>
+                  <span className="stamp-7f">KD</span>
                 </div>
               </div>
             </motion.div>
@@ -146,7 +146,7 @@ export default function About() {
 
             {/* Quote */}
             <motion.div className="about__quote" variants={itemVariants}>
-              <p>"Real businesses. <span className="text-red">Real growth.</span>"</p>
+              <p>"யாவரும் கேளிர். <span className="text-red">Everyone is kin.</span>"</p>
             </motion.div>
           </motion.div>
         </div>

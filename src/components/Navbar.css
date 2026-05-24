@@ -13,11 +13,11 @@
 }
 
 .navbar--scrolled {
-  background: rgba(17, 17, 17, 0.92);
+  background: var(--theme-navbar-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 12px 0;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 .navbar__inner {
@@ -41,33 +41,30 @@
   align-items: baseline;
   font-family: var(--font-display);
   font-weight: var(--fw-black);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   line-height: 1;
 }
 
-.logo-7 {
-  color: var(--color-white);
-  transition: color var(--transition-base);
-}
-
-
-
-.logo-f {
+.logo-kaylir {
   color: var(--color-red);
+  font-weight: var(--fw-black);
+  letter-spacing: -0.02em;
 }
 
 .logo-text {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 .logo-digital {
   font-family: var(--font-display);
   font-weight: var(--fw-bold);
-  font-size: 0.7rem;
-  letter-spacing: 0.35em;
-  color: var(--color-white);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--theme-text-on-dark);
   transition: color var(--transition-base);
+  margin-top: -2px;
 }
 
 
@@ -83,7 +80,7 @@
   font-family: var(--font-body);
   font-weight: var(--fw-medium);
   font-size: var(--fs-small);
-  color: var(--color-white);
+  color: var(--theme-text-on-dark);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   position: relative;
@@ -163,7 +160,7 @@
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--color-white);
+  background: var(--theme-text-on-dark);
   transition: all var(--transition-base);
 }
 
@@ -193,7 +190,7 @@
   right: 0;
   bottom: 0;
   z-index: var(--z-overlay);
-  background: var(--color-black);
+  background: var(--theme-section-dark-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,7 +214,7 @@
   font-family: var(--font-display);
   font-weight: var(--fw-bold);
   font-size: clamp(2rem, 6vw, 3.5rem);
-  color: var(--color-white);
+  color: var(--theme-text-on-dark);
   text-transform: uppercase;
   display: flex;
   align-items: baseline;

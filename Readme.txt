@@ -16,24 +16,40 @@ A modern, animated website for **7F Digital**, a creative agency helping small b
 
 ## How to Run
 
-### Prerequisites
-- Node.js (v18 or above)
-- npm
+Follow these step-by-step instructions to run the project locally on your machine:
 
-### Development
+### 1. Prerequisites
+Ensure you have the following installed on your system:
+- **Node.js** (v18 or above)
+- **npm** (comes with Node.js)
+
+### 2. Install Dependencies
+Open your terminal in the project directory and install the required packages:
 ```bash
 npm install
+```
+
+### 3. Start Development Server
+Run the following command to start the Vite local development server:
+```bash
 npm run dev
 ```
-Opens at `http://localhost:5173`
+
+### 4. View in Browser
+Open your web browser and navigate to the local URL provided in the terminal, usually:
+`http://localhost:5173`
+
+---
 
 ### Production Build
+To create an optimized production-ready build:
 ```bash
 npm run build
 ```
-Output goes to `dist/` folder — ready for deployment.
+The compiled output will be generated in the `dist/` folder, which is ready for deployment.
 
 ### Preview Production Build
+To test the production build locally before deploying:
 ```bash
 npm run preview
 ```

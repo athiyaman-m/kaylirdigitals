@@ -18,14 +18,13 @@ export default function Footer() {
           >
             <div className="footer__logo">
               <div className="logo-mark">
-                <span className="logo-7">7</span>
-                <span className="logo-f">F</span>
+                <span className="logo-kaylir">Kaylir</span>
               </div>
-              <span className="logo-digital">DIGITAL</span>
+              <span className="logo-digital">Digitals</span>
             </div>
-            <p className="footer__tagline">Strategy First.<br />Design That Speaks.<br /><span className="text-red">Growth That Lasts.</span></p>
+            <p className="footer__tagline">யாவரும் கேளிர்.<br />Everyone is kin.<br /><span className="text-red">Your shop is our shop.</span></p>
             <p className="footer__desc">
-              Helping small businesses in Tamil Nadu build strong digital presence since day one.
+              A small team from Tamil Nadu helping small businesses build strong digital presence.
             </p>
           </motion.div>
 
@@ -58,11 +57,11 @@ export default function Footer() {
             <ul className="footer__links footer__contact">
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
-                <a href="https://www.instagram.com/7fdigitals/" target="_blank" rel="noopener noreferrer">@7fdigitals</a>
+                <a href="https://www.instagram.com/kaylirdigitals/" target="_blank" rel="noopener noreferrer">@kaylirdigitals</a>
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
-                <a href="mailto:7fdigitals@gmail.com">7fdigitals@gmail.com</a>
+                <a href="mailto:kaylirdigital@gmail.com">kaylirdigital@gmail.com</a>
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
@@ -182,14 +181,14 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="footer__bottom">
           <div className="footer__bottom-left">
-            <p className="footer__partner">ONE PARTNER. <span className="text-red">ALL DIGITAL.</span></p>
+            <p className="footer__partner">YOUR BUSINESS. <span className="text-red">OUR BUSINESS.</span></p>
           </div>
           <div className="footer__bottom-center">
-            <p>© {currentYear} 7F Digital. All rights reserved.</p>
+            <p>© {currentYear} Kaylir Digitals. All rights reserved.</p>
           </div>
           <div className="footer__bottom-right">
-            <p className="footer__tamil">நம்முடன் வளர்வோம்.</p>
-            <p className="footer__english">We Grow With You.</p>
+            <p className="footer__tamil">யாவரும் கேளிர்.</p>
+            <p className="footer__english">Everyone is kin.</p>
           </div>
         </div>
       </div>

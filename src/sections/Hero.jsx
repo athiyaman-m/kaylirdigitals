@@ -6,6 +6,42 @@ import './Hero.css'
 const projects = [
   {
     id: 1,
+    name: 'KR Enterprises',
+    type: 'Business Website',
+    image: '/assets/img/portfolio/kr-enterprises.png',
+    metric: '+150%',
+    metricLabel: 'Lead Generation',
+    desc: 'Construction company website — Chennai',
+  },
+  {
+    id: 2,
+    name: 'Preethi Motors',
+    type: 'Business Website',
+    image: '/assets/img/portfolio/preethi-motors.png',
+    metric: '+200%',
+    metricLabel: 'Property Leads',
+    desc: 'Real estate & property website — Coimbatore',
+  },
+  {
+    id: 3,
+    name: 'KR Construction',
+    type: 'Business Website',
+    image: '/assets/img/portfolio/kr-construction.png',
+    metric: '+180%',
+    metricLabel: 'Client Inquiries',
+    desc: 'Residential, commercial & industrial builds',
+  },
+  {
+    id: 4,
+    name: 'BrandEssence',
+    type: 'Business Website',
+    image: '/assets/img/portfolio/brandessence.png',
+    metric: '+250%',
+    metricLabel: 'Brand Reach',
+    desc: 'Digital marketing agency — Chennai',
+  },
+  {
+    id: 5,
     name: 'Urban Edge',
     type: 'E-Commerce Website',
     image: '/assets/img/portfolio/urban-edge.png',
@@ -14,7 +50,7 @@ const projects = [
     desc: 'Men\'s fashion e-commerce with full catalog & checkout',
   },
   {
-    id: 2,
+    id: 6,
     name: 'Grace Boutique',
     type: 'E-Commerce Website',
     image: '/assets/img/portfolio/grace-boutique.png',
@@ -22,51 +58,15 @@ const projects = [
     metricLabel: 'Customer Reach',
     desc: 'Ethnic wear boutique with elegant brand identity',
   },
-  {
-    id: 3,
-    name: 'StyleHub',
-    type: 'E-Commerce Website',
-    image: '/assets/img/portfolio/stylehub.png',
-    metric: '+320%',
-    metricLabel: 'Traffic Growth',
-    desc: 'Family fashion store — Men, Women & Kids',
-  },
-  {
-    id: 4,
-    name: 'BrandEssence',
-    type: 'Business Website',
-    image: '/assets/img/portfolio/image.png',
-    metric: '+150%',
-    metricLabel: 'Lead Generation',
-    desc: 'Marketing & branding agency presence online',
-  },
-  {
-    id: 5,
-    name: 'VM Farm Fresh',
-    type: 'Mobile App',
-    image: '/assets/img/portfolio/app2.jpeg',
-    metric: '+200%',
-    metricLabel: 'Daily Orders',
-    desc: 'Milk distribution & sales management app',
-  },
-  {
-    id: 6,
-    name: 'Sales Dashboard',
-    type: 'Data Analytics',
-    image: '/assets/img/portfolio/ds2.png',
-    metric: '+85%',
-    metricLabel: 'Decision Speed',
-    desc: 'E-commerce sales analytics & visualization',
-  },
 ]
 
 /* ── Typewriter captions ── */
 const captions = [
-  'We Build Digital Presence That Grows',
-  'Strategy First. Design That Speaks.',
-  'Real Businesses. Real Results.',
+  'Your Business Is Our Business.',
+  'We Study Your Business First.',
+  'Real Businesses. Real Growth.',
   'Not Just Design. Direction.',
-  'One Partner. All Digital.',
+  'யாவரும் கேளிர். Everyone Is Kin.',
 ]
 
 /* ── Typewriter Hook ── */
@@ -124,10 +124,39 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero">
-      {/* ── Background grid ── */}
-      <div className="hero__grid-bg">
-        {[...Array(20)].map((_, i) => (
-          <div key={i} className="grid-line" />
+      {/* ── Floating Icons Background ── */}
+      <div className="hero__floating-icons" aria-hidden="true">
+        {[
+          { icon: '</>', x: 5, y: 15, size: 28, delay: 0 },
+          { icon: '{ }', x: 88, y: 10, size: 24, delay: 1.5 },
+          { icon: '#', x: 15, y: 70, size: 32, delay: 3 },
+          { icon: '⚙', x: 92, y: 65, size: 26, delay: 0.8 },
+          { icon: '💻', x: 75, y: 20, size: 22, delay: 2.2 },
+          { icon: '📱', x: 8, y: 45, size: 20, delay: 4 },
+          { icon: '📊', x: 82, y: 80, size: 24, delay: 1 },
+          { icon: '🎯', x: 25, y: 85, size: 22, delay: 2.8 },
+          { icon: '📣', x: 50, y: 8, size: 20, delay: 3.5 },
+          { icon: '✉', x: 70, y: 90, size: 22, delay: 0.5 },
+          { icon: '❤', x: 35, y: 12, size: 18, delay: 4.5 },
+          { icon: '📸', x: 60, y: 75, size: 20, delay: 2 },
+          { icon: '🔗', x: 45, y: 88, size: 18, delay: 1.8 },
+          { icon: '< />', x: 95, y: 40, size: 20, delay: 3.2 },
+          { icon: '⟨⟩', x: 3, y: 90, size: 22, delay: 0.3 },
+          { icon: '★', x: 55, y: 30, size: 16, delay: 5 },
+        ].map((item, i) => (
+          <span
+            key={i}
+            className="floating-icon"
+            style={{
+              '--fi-x': `${item.x}%`,
+              '--fi-y': `${item.y}%`,
+              '--fi-size': `${item.size}px`,
+              '--fi-delay': `${item.delay}s`,
+              '--fi-duration': `${6 + (i % 4) * 2}s`,
+            }}
+          >
+            {item.icon}
+          </span>
         ))}
       </div>
 
@@ -139,9 +168,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <span className="badge-text">7F DIGITAL</span>
+          <span className="badge-text">KAYLIR DIGITALS</span>
           <span className="badge-dot-pulse"></span>
-          <span className="badge-tagline">We Grow With You</span>
+          <span className="badge-tagline">யாவரும் கேளிர்</span>
         </motion.div>
 
         {/* Torch Typewriter */}
@@ -177,7 +206,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
         >
-          See how we transformed local businesses with smart digital strategies
+          We study your business first. Then we build.
         </motion.p>
       </div>
 

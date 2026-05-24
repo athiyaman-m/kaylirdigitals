@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import ThemeToggle from './ThemeToggle'
 import './Navbar.css'
 
 export default function Navbar() {
@@ -38,11 +39,10 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#hero" className="navbar__logo" onClick={(e) => { e.preventDefault(); handleNav('#hero') }}>
             <div className="logo-mark">
-              <span className="logo-7">7</span>
-              <span className="logo-f">F</span>
+              <span className="logo-kaylir">Kaylir</span>
             </div>
             <div className="logo-text">
-              <span className="logo-digital">DIGITAL</span>
+              <span className="logo-digital">Digitals</span>
             </div>
           </a>
 
@@ -59,6 +59,9 @@ export default function Navbar() {
               </a>
             ))}
           </nav>
+
+          {/* Theme Toggle */}
+          <ThemeToggle />
 
           {/* CTA */}
           <a
@@ -116,7 +119,7 @@ export default function Navbar() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                <p>7fdigitals@gmail.com</p>
+                <p>kaylirdigital@gmail.com</p>
                 <p>Tamil Nadu, India</p>
               </motion.div>
             </div>
