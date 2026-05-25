@@ -17,10 +17,11 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
           >
             <div className="footer__logo">
-              <div className="logo-mark">
-                <span className="logo-kaylir">Kaylir</span>
+              {/* Stacked: Kaylir on top, Digitals below */}
+              <div className="footer-logo-stack">
+                <span className="footer-logo-kaylir">Kaylir</span>
+                <span className="footer-logo-digital">Digitals</span>
               </div>
-              <span className="logo-digital">Digitals</span>
             </div>
             <p className="footer__tagline">யாவரும் கேளிர்.<br />Everyone is kin.<br /><span className="text-red">Your shop is our shop.</span></p>
             <p className="footer__desc">
@@ -42,6 +43,7 @@ export default function Footer() {
               <li><a href="#services">Social Media Management</a></li>
               <li><a href="#services">Meta Ads Management</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#pricing">Pricing</a></li>
             </ul>
           </motion.div>
 

@@ -1,11 +1,24 @@
 /* ========================================
-   FOOTER
+   FOOTER — Stacked Logo + Enhanced Effects
    ======================================== */
 
 .footer {
   padding: var(--space-4xl) 0 0;
   background: #111111;
   color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle gradient overlay */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(225, 29, 46, 0.3), transparent);
 }
 
 /* Skyline Illustration */
@@ -30,39 +43,38 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Brand */
+/* ── Footer Logo — Stacked ── */
 .footer__logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   margin-bottom: var(--space-md);
 }
 
-.footer__logo .logo-mark {
+.footer-logo-stack {
   display: flex;
-  align-items: baseline;
-  font-family: var(--font-display);
-  font-weight: var(--fw-black);
-  font-size: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
   line-height: 1;
 }
 
-.footer__logo .logo-7 {
-  color: var(--color-white);
-}
-
-.footer__logo .logo-f {
+.footer-logo-kaylir {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: 2rem;
   color: var(--color-red);
+  line-height: 1;
+  text-shadow: 0 0 30px rgba(225, 29, 46, 0.2);
 }
 
-.footer__logo .logo-digital {
+.footer-logo-digital {
   font-family: var(--font-display);
   font-weight: var(--fw-bold);
-  font-size: 0.7rem;
-  letter-spacing: 0.35em;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
   color: var(--color-white);
+  text-transform: uppercase;
+  margin-top: 2px;
 }
 
+/* Brand */
 .footer__tagline {
   font-family: var(--font-display);
   font-weight: var(--fw-bold);
@@ -98,11 +110,13 @@
 .footer__links li span {
   color: var(--color-gray);
   font-size: var(--fs-small);
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-block;
 }
 
 .footer__links li a:hover {
   color: var(--color-red);
+  transform: translateX(3px);
 }
 
 .footer__contact li {
@@ -160,7 +174,7 @@
   font-style: italic;
 }
 
-/* Responsive */
+/* ── Responsive ── */
 @media (max-width: 900px) {
   .footer__grid {
     grid-template-columns: 1fr 1fr;
@@ -181,6 +195,14 @@
 
   .footer__tamil,
   .footer__english {
+    text-align: center;
+  }
+
+  .footer-logo-stack {
+    align-items: center;
+  }
+
+  .footer__brand {
     text-align: center;
   }
 }

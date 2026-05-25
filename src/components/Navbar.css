@@ -1,5 +1,5 @@
 /* ========================================
-   NAVBAR
+   NAVBAR — Kaylir Digitals
    ======================================== */
 
 .navbar {
@@ -16,7 +16,7 @@
   background: var(--theme-navbar-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  padding: 12px 0;
+  padding: 10px 0;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -27,49 +27,42 @@
   gap: var(--space-lg);
 }
 
-/* Logo */
+/* ── Logo — Stacked Vertically ── */
 .navbar__logo {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
   text-decoration: none;
   z-index: var(--z-modal);
 }
 
-.logo-mark {
+.logo-stack {
   display: flex;
-  align-items: baseline;
-  font-family: var(--font-display);
-  font-weight: var(--fw-black);
-  font-size: 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
   line-height: 1;
 }
 
 .logo-kaylir {
-  color: var(--color-red);
+  font-family: var(--font-display);
   font-weight: var(--fw-black);
+  font-size: 1.6rem;
+  color: var(--color-red);
   letter-spacing: -0.02em;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  line-height: 1;
 }
 
 .logo-digital {
   font-family: var(--font-display);
   font-weight: var(--fw-bold);
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
   color: var(--theme-text-on-dark);
   transition: color var(--transition-base);
-  margin-top: -2px;
+  margin-top: 1px;
+  text-transform: uppercase;
 }
 
-
-
-/* Navigation Links */
+/* ── Navigation Links ── */
 .navbar__nav {
   display: flex;
   align-items: center;
@@ -87,8 +80,6 @@
   padding: 4px 0;
   transition: color var(--transition-base);
 }
-
-
 
 .navbar__link::after {
   content: '';
@@ -109,7 +100,7 @@
   color: var(--color-red);
 }
 
-/* CTA Button */
+/* ── CTA Button ── */
 .navbar__cta {
   display: inline-flex;
   align-items: center;
@@ -124,12 +115,27 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar__cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.navbar__cta:hover::before {
+  opacity: 1;
 }
 
 .navbar__cta:hover {
   background: #c4182a;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-glow), 0 8px 25px rgba(225, 29, 46, 0.3);
 }
 
 .cta-arrow {
@@ -141,7 +147,7 @@
   transform: translate(2px, -2px);
 }
 
-/* Mobile Toggle */
+/* ── Mobile Toggle ── */
 .navbar__toggle {
   display: none;
   flex-direction: column;
@@ -164,8 +170,6 @@
   transition: all var(--transition-base);
 }
 
-
-
 .navbar__toggle.active span {
   background: var(--color-white);
 }
@@ -182,7 +186,7 @@
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile Menu */
+/* ── Mobile Menu Overlay ── */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -194,14 +198,54 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
+}
+
+/* Subtle gradient overlay on mobile menu */
+.mobile-menu::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(225, 29, 46, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(225, 29, 46, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ── Close Button ── */
+.mobile-menu__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(225, 29, 46, 0.12);
+  border: 1px solid rgba(225, 29, 46, 0.25);
+  border-radius: var(--radius-full);
+  color: var(--color-red);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.mobile-menu__close:hover {
+  background: var(--color-red);
+  color: var(--color-white);
+  transform: rotate(90deg);
+  box-shadow: 0 0 20px rgba(225, 29, 46, 0.4);
 }
 
 .mobile-menu__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-3xl);
   padding: var(--space-lg);
+  z-index: 2;
 }
 
 .mobile-menu__nav {
@@ -213,17 +257,18 @@
 .mobile-menu__link {
   font-family: var(--font-display);
   font-weight: var(--fw-bold);
-  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-size: clamp(1.8rem, 5.5vw, 3.5rem);
   color: var(--theme-text-on-dark);
   text-transform: uppercase;
   display: flex;
   align-items: baseline;
   gap: var(--space-sm);
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
 .mobile-menu__link:hover {
   color: var(--color-red);
+  transform: translateX(8px);
 }
 
 .mobile-menu__number {
@@ -242,7 +287,7 @@
   margin-bottom: 4px;
 }
 
-/* Responsive */
+/* ── Responsive ── */
 @media (max-width: 900px) {
   .navbar__nav,
   .navbar__cta {
@@ -251,5 +296,15 @@
 
   .navbar__toggle {
     display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-kaylir {
+    font-size: 1.3rem;
+  }
+
+  .logo-digital {
+    font-size: 0.5rem;
   }
 }

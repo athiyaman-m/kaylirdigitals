@@ -1,5 +1,5 @@
 /* ========================================
-   ABOUT SECTION
+   ABOUT SECTION — 3D Motion + Mobile Fixes
    ======================================== */
 
 .about {
@@ -90,7 +90,7 @@
   color: var(--color-text-dark);
 }
 
-/* Pillars */
+/* ── Pillars — Strategy, Design, Growth ── */
 .about__pillars {
   display: flex;
   gap: var(--space-xl);
@@ -105,6 +105,11 @@
   text-align: center;
   flex: 1;
   max-width: 160px;
+  transition: transform 0.4s ease;
+}
+
+.pillar:hover {
+  transform: translateY(-6px);
 }
 
 .pillar__icon {
@@ -118,13 +123,14 @@
   border-radius: var(--radius-lg);
   margin-bottom: var(--space-sm);
   transition: all var(--transition-base);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .pillar:hover .pillar__icon {
   background: var(--color-red);
   color: var(--color-white);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-glow), 0 8px 24px rgba(225, 29, 46, 0.3);
 }
 
 .pillar__connector {
@@ -176,7 +182,7 @@
   font-style: italic;
 }
 
-/* Responsive */
+/* ── Responsive ── */
 @media (max-width: 900px) {
   .about__grid {
     grid-template-columns: 1fr;
@@ -193,28 +199,60 @@
   }
 }
 
+/* ── Mobile: Pillars stay horizontal, 3-in-a-row, properly aligned ── */
 @media (max-width: 600px) {
   .about__pillars {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-lg);
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: nowrap;
   }
 
   .pillar {
-    max-width: 100%;
-    flex-direction: row;
-    text-align: left;
-    gap: var(--space-sm);
-  }
-
-  .pillar__connector {
-    display: none;
+    max-width: none;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .pillar__icon {
-    margin-bottom: 0;
     width: 52px;
     height: 52px;
-    flex-shrink: 0;
+    margin-bottom: 8px;
+  }
+
+  .pillar__connector {
+    display: flex;
+  }
+
+  .connector-line {
+    height: 14px;
+  }
+
+  .pillar__title {
+    font-size: var(--fs-small);
+    letter-spacing: 0.03em;
+  }
+
+  .pillar__desc {
+    font-size: var(--fs-xs);
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 380px) {
+  .about__pillars {
+    gap: var(--space-xs);
+  }
+
+  .pillar__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .pillar__title {
+    font-size: var(--fs-xs);
   }
 }

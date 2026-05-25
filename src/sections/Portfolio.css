@@ -1,5 +1,5 @@
 /* ========================================
-   PORTFOLIO SECTION
+   PORTFOLIO SECTION — 3D Hover Effects
    ======================================== */
 
 .portfolio__header {
@@ -32,12 +32,14 @@
 .filter-btn:hover {
   border-color: var(--color-text-dark);
   color: var(--color-text-dark);
+  transform: translateY(-1px);
 }
 
 .filter-btn--active {
   background: var(--theme-icon-bg);
   color: var(--theme-text-on-dark);
   border-color: var(--theme-icon-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Grid */
@@ -45,9 +47,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
+  perspective: var(--perspective);
 }
 
-/* Item */
+/* Item — 3D hover */
 .portfolio-item {
   position: relative;
   border-radius: var(--radius-lg);
@@ -55,6 +58,13 @@
   aspect-ratio: 4/3;
   display: block;
   cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-style: preserve-3d;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-6px) rotateX(2deg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
 }
 
 .portfolio-item__image {
@@ -66,14 +76,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-slow);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .portfolio-item:hover .portfolio-item__image img {
   transform: scale(1.08);
 }
 
-/* Overlay */
+/* Overlay — gradient depth */
 .portfolio-item__overlay {
   position: absolute;
   inset: 0;
@@ -87,7 +97,7 @@
   justify-content: flex-end;
   padding: var(--space-lg);
   opacity: 0;
-  transition: opacity var(--transition-base);
+  transition: opacity 0.4s ease;
 }
 
 .portfolio-item:hover .portfolio-item__overlay {
@@ -134,7 +144,13 @@
   font-weight: var(--fw-bold);
   transform: translate(20px, -20px);
   opacity: 0;
-  transition: all var(--transition-base);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 4px 16px rgba(225, 29, 46, 0.4);
+}
+
+.portfolio-item:hover .portfolio-item__arrow {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 /* No-link items */
@@ -146,7 +162,7 @@
   opacity: 1;
 }
 
-/* Responsive */
+/* ── Responsive ── */
 @media (max-width: 900px) {
   .portfolio__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -169,6 +185,15 @@
   .portfolio-item__arrow {
     opacity: 1;
     transform: translate(0, 0);
+  }
+
+  .portfolio-item:hover {
+    transform: translateY(-3px);
+  }
+
+  .filter-btn {
+    padding: 8px 18px;
+    font-size: var(--fs-xs);
   }
 }
 

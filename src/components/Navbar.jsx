@@ -23,6 +23,7 @@ export default function Navbar() {
     { label: 'About', href: '#about' },
     { label: 'Services', href: '#services' },
     { label: 'Portfolio', href: '#portfolio' },
+    { label: 'Pricing', href: '#pricing' },
     { label: 'Contact', href: '#contact' },
   ]
 
@@ -36,12 +37,10 @@ export default function Navbar() {
     <>
       <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
         <div className="navbar__inner container">
-          {/* Logo */}
+          {/* Logo — Stacked: Kaylir on top, Digitals below */}
           <a href="#hero" className="navbar__logo" onClick={(e) => { e.preventDefault(); handleNav('#hero') }}>
-            <div className="logo-mark">
+            <div className="logo-stack">
               <span className="logo-kaylir">Kaylir</span>
-            </div>
-            <div className="logo-text">
               <span className="logo-digital">Digitals</span>
             </div>
           </a>
@@ -96,6 +95,21 @@ export default function Navbar() {
             exit={{ clipPath: 'circle(0% at calc(100% - 40px) 40px)' }}
             transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
           >
+            {/* Close Button */}
+            <motion.button
+              className="mobile-menu__close"
+              onClick={() => setMenuOpen(false)}
+              aria-label="Close menu"
+              initial={{ opacity: 0, rotate: -90 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              transition={{ delay: 0.3, duration: 0.3 }}
+            >
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </motion.button>
+
             <div className="mobile-menu__content">
               <nav className="mobile-menu__nav">
                 {navLinks.map((link, i) => (

@@ -1,5 +1,5 @@
 /* ========================================
-   HERO SECTION — Marquee + Typewriter
+   HERO SECTION — Marquee + Typewriter + 3D Motion
    ======================================== */
 
 .hero {
@@ -14,17 +14,24 @@
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Subtle radial gradient overlay */
+/* Animated gradient mesh background */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(225, 29, 46, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 30%, rgba(225, 29, 46, 0.04) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(225, 29, 46, 0.03) 0%, transparent 40%);
+    radial-gradient(ellipse at 20% 50%, rgba(225, 29, 46, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 30%, rgba(225, 29, 46, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(225, 29, 46, 0.04) 0%, transparent 40%);
   pointer-events: none;
   z-index: 1;
+  animation: hero-bg-drift 15s ease-in-out infinite alternate;
+}
+
+@keyframes hero-bg-drift {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 /* Floating Icons Background */
@@ -59,16 +66,16 @@
 
 @keyframes float-drift {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px) rotate(0deg) translateZ(0);
   }
   25% {
-    transform: translateY(-18px) rotate(3deg);
+    transform: translateY(-18px) rotate(3deg) translateZ(10px);
   }
   50% {
-    transform: translateY(-8px) rotate(-2deg);
+    transform: translateY(-8px) rotate(-2deg) translateZ(5px);
   }
   75% {
-    transform: translateY(-22px) rotate(1deg);
+    transform: translateY(-22px) rotate(1deg) translateZ(15px);
   }
 }
 
@@ -94,6 +101,8 @@
   border-radius: var(--radius-full);
   margin-bottom: var(--space-xl);
   background: var(--theme-card-dark);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .badge-text {
@@ -110,11 +119,7 @@
   background: var(--color-red);
   border-radius: var(--radius-full);
   animation: pulse-dot 2s ease infinite;
-}
-
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(1.5); }
+  box-shadow: 0 0 8px rgba(225, 29, 46, 0.6);
 }
 
 .badge-tagline {
@@ -131,6 +136,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  perspective: var(--perspective);
 }
 
 .torch-pill {
@@ -143,6 +149,13 @@
   border-radius: 80px;
   min-height: 100px;
   overflow: visible;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.torch-pill:hover {
+  box-shadow: 0 20px 60px rgba(225, 29, 46, 0.1);
 }
 
 /* Torch Glow Effect */
@@ -340,7 +353,7 @@
   100% { transform: translateX(-50%); }
 }
 
-/* Marquee Card */
+/* Marquee Card — 3D hover effect */
 .marquee-card {
   flex-shrink: 0;
   width: 360px;
@@ -348,15 +361,20 @@
   border: 1px solid var(--theme-border-dark);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: all var(--transition-base);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   cursor: pointer;
+  transform-style: preserve-3d;
+  perspective: var(--perspective);
 }
 
 .marquee-card:hover {
   background: var(--theme-card-dark-hover);
   border-color: rgba(225, 29, 46, 0.25);
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+  transform: translateY(-8px) rotateX(2deg);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    var(--shadow-glow),
+    0 0 0 1px rgba(225, 29, 46, 0.1);
 }
 
 /* Card Image */
@@ -372,11 +390,11 @@
   height: 100%;
   object-fit: cover;
   object-position: top;
-  transition: transform var(--transition-slow);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .marquee-card:hover .marquee-card__image {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 /* Growth Metric Badge */
@@ -392,6 +410,7 @@
   align-items: center;
   gap: 2px;
   box-shadow: 0 4px 16px rgba(225, 29, 46, 0.4);
+  backdrop-filter: blur(4px);
 }
 
 .metric-value {
@@ -441,12 +460,14 @@
   line-height: 1.4;
 }
 
-/* ── Stats Bar ── */
+/* ── Stats Bar — Glassmorphism ── */
 .hero__stats {
   position: relative;
   z-index: 2;
   border-top: 1px solid var(--theme-border-dark);
   background: var(--theme-card-dark);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   padding: var(--space-lg) 0;
 }
 
@@ -530,19 +551,19 @@
 
 @media (max-width: 600px) {
   .torch-pill {
-    padding: 18px 24px;
+    padding: 16px 20px;
     border-radius: 50px;
-    min-height: 70px;
+    min-height: 60px;
   }
 
   .torch-text {
-    font-size: clamp(1rem, 5vw, 1.4rem);
-    gap: 8px;
+    font-size: clamp(0.85rem, 4.5vw, 1.3rem);
+    gap: 6px;
   }
 
   .torch-glow {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
   .torch-glow__particles {

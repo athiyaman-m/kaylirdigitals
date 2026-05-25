@@ -8,6 +8,7 @@ import Services from './sections/Services'
 import WhyUs from './sections/WhyUs'
 import Portfolio from './sections/Portfolio'
 import Testimonials from './sections/Testimonials'
+import Pricing from './sections/Pricing'
 import Contact from './sections/Contact'
 
 /* Preloader */
@@ -30,8 +31,11 @@ function Preloader({ onComplete }) {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="preloader__7">Kaylir</span>
-          <span className="preloader__f">Digitals</span>
+          {/* Stacked: Kaylir on top, Digitals below */}
+          <div className="preloader__logo-stack">
+            <span className="preloader__7">Kaylir</span>
+            <span className="preloader__f">Digitals</span>
+          </div>
         </motion.div>
         <motion.div
           className="preloader__bar-track"
@@ -147,6 +151,7 @@ export default function App() {
             <WhyUs />
             <Portfolio />
             <Testimonials />
+            <Pricing />
             <Contact />
           </main>
           <Footer />

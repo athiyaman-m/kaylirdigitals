@@ -14,6 +14,7 @@
   --color-gray-dark: #444444;
   --color-gray: #B5B5B5;
   --color-gray-light: #E8E8E8;
+  --color-yellow: #FFD700;
 
   /* Semantic Colors (Dark theme — default) */
   --color-bg-primary: var(--color-black);
@@ -85,6 +86,8 @@
   --shadow-md: 0 4px 24px rgba(0,0,0,0.12);
   --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
   --shadow-glow: 0 0 40px rgba(225,29,46,0.15);
+  --shadow-glow-lg: 0 0 80px rgba(225,29,46,0.2);
+  --shadow-3d: 0 20px 60px rgba(0,0,0,0.3);
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -98,6 +101,10 @@
   --z-sticky: 100;
   --z-overlay: 200;
   --z-modal: 300;
+
+  /* 3D Perspective */
+  --perspective: 1000px;
+  --perspective-subtle: 1500px;
 }
 
 /* --- Light Theme Overrides --- */
@@ -226,6 +233,7 @@ input, textarea {
 
 .section {
   padding: var(--space-4xl) 0;
+  position: relative;
 }
 
 .section-dark {
@@ -273,6 +281,7 @@ input, textarea {
   background: var(--color-red);
   border-radius: var(--radius-full);
   display: inline-block;
+  animation: pulse-dot 2s ease infinite;
 }
 
 .section-title {
@@ -306,6 +315,23 @@ input, textarea {
   transition: all var(--transition-base);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
 }
 
 .btn-primary:hover {
@@ -355,6 +381,23 @@ input, textarea {
   transition: all var(--transition-base);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-dark:hover::before {
+  left: 100%;
 }
 
 .btn-dark:hover {
@@ -405,6 +448,23 @@ input, textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+/* Animated background gradient on preloader */
+.preloader::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(225, 29, 46, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(225, 29, 46, 0.05) 0%, transparent 50%);
+  animation: preloader-bg-shift 3s ease-in-out infinite alternate;
+}
+
+@keyframes preloader-bg-shift {
+  0% { transform: translate(-5%, -5%) rotate(0deg); }
+  100% { transform: translate(5%, 5%) rotate(3deg); }
 }
 
 .preloader__content {
@@ -412,27 +472,40 @@ input, textarea {
   flex-direction: column;
   align-items: center;
   gap: var(--space-lg);
+  position: relative;
+  z-index: 2;
 }
 
 .preloader__logo {
   display: flex;
-  align-items: baseline;
-  gap: 10px;
-  font-family: var(--font-display);
-  font-weight: var(--fw-black);
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  align-items: center;
+  justify-content: center;
+}
+
+.preloader__logo-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   line-height: 1;
 }
 
 .preloader__7 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: clamp(3rem, 8vw, 5rem);
   color: var(--color-red);
+  line-height: 1;
+  text-shadow: 0 0 40px rgba(225, 29, 46, 0.3);
 }
 
 .preloader__f {
-  color: var(--color-white);
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-family: var(--font-display);
   font-weight: var(--fw-bold);
-  letter-spacing: 0.1em;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: var(--color-white);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-top: 4px;
 }
 
 .preloader__bar-track {
@@ -447,6 +520,7 @@ input, textarea {
   height: 100%;
   background: var(--color-red);
   border-radius: var(--radius-full);
+  box-shadow: 0 0 10px rgba(225, 29, 46, 0.5);
 }
 
 .preloader__text {
@@ -472,6 +546,22 @@ input, textarea {
   justify-content: center;
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
   transition: box-shadow var(--transition-base);
+}
+
+.whatsapp-float::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: var(--radius-full);
+  background: rgba(37, 211, 102, 0.3);
+  animation: whatsapp-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes whatsapp-ping {
+  75%, 100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 
 .whatsapp-float:hover {
@@ -502,4 +592,39 @@ input, textarea {
 .scroll-top:hover {
   background: var(--color-red);
   border-color: var(--color-red);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* --- Global Animations --- */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.5); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Mobile floating buttons */
+@media (max-width: 600px) {
+  .whatsapp-float {
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .scroll-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
 }
