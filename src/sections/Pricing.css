@@ -36,7 +36,7 @@
   transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   box-shadow: var(--theme-shadow-sm);
   transform-style: preserve-3d;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Subtle gradient overlay on card */
@@ -66,6 +66,8 @@
   border-color: var(--color-red);
   box-shadow: 0 8px 40px rgba(225, 29, 46, 0.12);
   position: relative;
+  padding-top: calc(var(--space-2xl) + 8px);
+  margin-top: 12px;
 }
 
 /* Animated glow border on highlighted */

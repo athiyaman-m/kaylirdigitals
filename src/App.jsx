@@ -77,7 +77,7 @@ function WhatsAppFloat() {
     <AnimatePresence>
       {visible && (
         <motion.a
-          href="https://wa.me/+918940089643?text=Hi%2C%20I%20need%20digital%20services%20for%20my%20business.%20Can%20you%20help%3F"
+          href="https://wa.me/+916381806635?text=Hi%2C%20I%20need%20digital%20services%20for%20my%20business.%20Can%20you%20help%3F"
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-float"

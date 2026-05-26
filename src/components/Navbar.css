@@ -43,23 +43,23 @@
 }
 
 .logo-kaylir {
-  font-family: var(--font-display);
-  font-weight: var(--fw-black);
-  font-size: 1.6rem;
+  font-family: 'Baloo 2', var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
   color: var(--color-red);
   letter-spacing: -0.02em;
-  line-height: 1;
+  line-height: 0.9;
 }
 
 .logo-digital {
-  font-family: var(--font-display);
-  font-weight: var(--fw-bold);
-  font-size: 0.6rem;
-  letter-spacing: 0.18em;
+  font-family: 'Baloo 2', var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
   color: var(--theme-text-on-dark);
   transition: color var(--transition-base);
-  margin-top: 1px;
-  text-transform: uppercase;
+  margin-top: -1px;
+  align-self: flex-end;
 }
 
 /* ── Navigation Links ── */
@@ -301,10 +301,10 @@
 
 @media (max-width: 480px) {
   .logo-kaylir {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .logo-digital {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
 }

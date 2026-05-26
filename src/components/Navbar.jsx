@@ -134,6 +134,7 @@ export default function Navbar() {
                 transition={{ delay: 0.5 }}
               >
                 <p>kaylirdigital@gmail.com</p>
+                <p>+91 63818 06635</p>
                 <p>Tamil Nadu, India</p>
               </motion.div>
             </div>

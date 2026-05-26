@@ -10,8 +10,8 @@ const pillars = [
         <polyline points="2 12 12 17 22 12" />
       </svg>
     ),
-    title: 'Strategy',
-    desc: 'We study your business first',
+    title: 'Kinship',
+    desc: "Your Brand, Everyone's Kin.",
   },
   {
     icon: (
@@ -22,8 +22,8 @@ const pillars = [
         <circle cx="11" cy="11" r="2" />
       </svg>
     ),
-    title: 'Design',
-    desc: 'That speaks to your audience',
+    title: 'Connection',
+    desc: 'Connect Like Family, Grow Like Business.',
   },
   {
     icon: (
@@ -31,8 +31,8 @@ const pillars = [
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
       </svg>
     ),
-    title: 'Growth',
-    desc: 'That lasts and scales',
+    title: 'Community',
+    desc: 'Where Every Customer is Kin.',
   },
 ]
 
@@ -69,23 +69,26 @@ export default function About() {
               ABOUT US <span className="dot"></span>
             </motion.div>
 
-            <motion.h2 className="section-title" variants={itemVariants}>
-              YOUR SHOP IS
+            <motion.h2 className="section-title" variants={itemVariants} style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: '1.2' }}>
+              A 2,000-Year-Old Vision,
               <br />
-              <span className="text-red">OUR SHOP.</span>
+              <span className="text-red">Reimagined</span>
               <br />
-              WE BUILD TOGETHER.
+              for the Digital Age.
             </motion.h2>
 
             <motion.p className="about__desc" variants={itemVariants}>
-              Kaylir Digitals is a small team from Tamil Nadu that builds digital
-              presence for small businesses — websites, social media, and ads.
-              We study your business first. Then we build.
+              Two millennia ago, the Tamil poet Kaniyan Pungundranar wrote, <strong>"Yathum Oore, Yavarum Kelir"</strong>—"To us, all towns are one, all people are kin." He envisioned a world without borders, where every stranger is family. Today, the internet has finally made that vision a reality.
+            </motion.p>
+
+            <motion.p className="about__desc" variants={itemVariants}>
+              At Kaylir Digitals, we believe digital marketing is more than just clicks and conversions; it is about <strong>kinship</strong>. We don't just broadcast your message; we build bridges that turn distant audiences into a loyal community.
             </motion.p>
 
             <motion.p className="about__desc about__desc--muted" variants={itemVariants}>
-              யாவரும் கேளிர் — Everyone is kin. That's the idea behind Kaylir.
-              Your business is our business. 🤝
+              Whether you are a local startup or a global brand, we treat your business as our own and your customers as our kin. In a world of infinite noise, we help you find your family.
+              <br /><br />
+              <strong>Kaylir Digitals. Welcome home.</strong>
             </motion.p>
 
             <motion.div className="about__cta" variants={itemVariants}>
@@ -146,7 +149,7 @@ export default function About() {
 
             {/* Quote */}
             <motion.div className="about__quote" variants={itemVariants}>
-              <p>"யாவரும் கேளிர். <span className="text-red">Everyone is kin.</span>"</p>
+              <p>"யாவரும் கேளிர்.<br /><span className="text-red">Everyone is kin.</span>"</p>
             </motion.div>
           </motion.div>
         </div>

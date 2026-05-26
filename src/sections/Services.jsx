@@ -137,7 +137,7 @@ export default function Services() {
               </ul>
 
               <a
-                href="https://wa.me/+918940089643"
+                href="https://wa.me/+916381806635"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="service-card__link"

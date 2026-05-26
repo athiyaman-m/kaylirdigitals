@@ -56,22 +56,23 @@
 }
 
 .footer-logo-kaylir {
-  font-family: var(--font-display);
-  font-weight: var(--fw-black);
-  font-size: 2rem;
+  font-family: 'Baloo 2', var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 2.4rem;
   color: var(--color-red);
-  line-height: 1;
+  line-height: 0.9;
   text-shadow: 0 0 30px rgba(225, 29, 46, 0.2);
+  letter-spacing: -0.02em;
 }
 
 .footer-logo-digital {
-  font-family: var(--font-display);
-  font-weight: var(--fw-bold);
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
+  font-family: 'Baloo 2', var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
   color: var(--color-white);
-  text-transform: uppercase;
-  margin-top: 2px;
+  margin-top: -2px;
+  align-self: flex-end;
 }
 
 /* Brand */

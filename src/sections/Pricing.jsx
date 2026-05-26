@@ -6,7 +6,7 @@ const plans = [
     id: 1,
     name: 'Starter',
     subtitle: 'Website Only',
-    price: '₹8,000 – ₹15,000',
+    price: 'Starting at ₹8,000',
     period: '',
     features: [
       'One-page or multi-page website',
@@ -21,7 +21,7 @@ const plans = [
     id: 2,
     name: 'Presence',
     subtitle: 'Website + Social',
-    price: '₹6,000 – ₹10,000',
+    price: 'Starting at ₹6,000',
     period: '/month',
     features: [
       'Website (built in month 1)',
@@ -36,7 +36,7 @@ const plans = [
     id: 3,
     name: 'Growth',
     subtitle: 'Full Package',
-    price: '₹12,000 – ₹20,000',
+    price: 'Starting at ₹12,000',
     period: '/month',
     features: [
       'Everything in Presence',
@@ -128,7 +128,7 @@ export default function Pricing() {
               </ul>
 
               <a
-                href="https://wa.me/+918940089643?text=Hi%2C%20I%27m%20interested%20in%20your%20pricing%20plans.%20Can%20you%20share%20more%20details%3F"
+                href="https://wa.me/+916381806635?text=Hi%2C%20I%27m%20interested%20in%20your%20pricing%20plans.%20Can%20you%20share%20more%20details%3F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`pricing-card__cta ${plan.highlighted ? 'btn-primary' : 'btn-dark'}`}
@@ -137,26 +137,6 @@ export default function Pricing() {
               </a>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* Note Banner */}
-        <motion.div
-          className="pricing__note"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <div className="pricing__note-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <line x1="12" y1="16" x2="12" y2="12" />
-              <line x1="12" y1="8" x2="12.01" y2="8" />
-            </svg>
-          </div>
-          <p>
-            For the first 3 clients — offer the demo free. Charge only if they move forward. After 3 case studies, stop doing free work. Your portfolio earns the next client.
-          </p>
         </motion.div>
       </div>
     </section>
